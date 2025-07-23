@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fadya Alkarkukli - Portfolio</title>
+<style>
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #f49ac2;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+.navbar li {
+  margin: 0 20px;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.navbar a:hover {
+  color: #fffacd;
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  text-align: center;
+  color: white;
+}
+.background-video {
+  position: absolute;
+right:0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.video-text {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+/* About Image Styling */
+.image-wrapper {
+  text-align: center;
+  margin: 2rem 0;
+}
+.styled-image {
+  width: 200px;
+  border-radius: 50%;
+  filter: brightness(90%) contrast(110%);
+  box-shadow: 0 0 10px #f49ac2;
+}
+
+/* Two Columns */
+.columns {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem;
+}
+.column {
+  width: 45%;
+  height: 150px;
+  background-color: #ffe4e1;
+  padding: 1rem;
+  color: #d63384;
+  border-radius: 10px;
+}
+
+/* Table Styling */
+table {
+  width: 60%;
+  margin: 2rem auto;
+  border-collapse: collapse;
+}
+th, td {
+  border: 2px solid #f49ac2;
+  padding: 10px;
+  text-align: center;
+}
+th {
+  background-color: #f8c8dc;
+}
+
+/* Hover on Paragraph */
+.hover-me {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+}
+.hover-me:hover {
+  color: #fff;
+  background-color: #f49ac2;
+  border-radius: 10px;
+}
+
+/* Image Text Overlay */
+.overlay-container {
+  position: relative;
+  width: 50%;
+  margin: 2rem auto;
+}
+.overlay-container img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+.overlay-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(255,192,203,0.7);
+  padding: 10px;
+  font-weight: bold;
+  color: #000;
+  border-radius: 5px;
+}
+
+/* Image Overlay Fade */
+.fade-container {
+  position: relative;
+  width: 50%;
+  margin: 2rem auto;
+}
+.fade-container img {
+  width: 100%;
+  display: block;
+  transition: 0.5s ease;
+}
+.fade-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 105, 180, 0.5);
+  color: white;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  border-radius: 10px;
+  transition: opacity 0.5s ease;
+}
+.fade-container:hover .fade-overlay {
+  opacity: 1;
+}
+
+/* Footer */
+footer {
+  background-color: #f49ac2;
+  text-align: center;
+  padding: 1rem;
+  font-weight: bold;
+  color: white;
+}
+
+</style>
+
+</head>
+<body>
+
+  <!-- Fixed Navbar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section with Hero -->
+  <section id="home" class="hero-section">
+    <video autoplay muted loop class="background-video">
+      <source src="https://cdn.pixabay.com/video/2022/02/11/107425-678258632_tiny.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+    <div class="video-text">
+      <h1>Welcome to Fadya's World</h1>
+      <p>Future Designer. Creative Mind. Girl Power!</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+
+    <!-- Centered Filtered Image -->
+    <div class="image-wrapper">
+      <img src="https://cdn.pixabay.com/photo/2016/11/23/00/32/woman-1851464_1280.jpg" alt="Fadya Alkarkukli" class="styled-image">
+    </div>
+
+    <!-- Two-column Layout -->
+    <div class="columns">
+      <div class="column">🌸 Passionate about design and Web development</div>
+      <div class="column">🎀 Currently learning HTML, CSS & Bootstrap</div>
+    </div>
+
+    <!-- Table -->
+    <h3>Skills & Progress</h3>
+    <table>
+      <tr>
+        <th>Skill</th>
+        <th>Level</th>
+      </tr>
+      <tr>
+        <td>HTML</td>
+        <td>Intermediate</td>
+      </tr>
+      <tr>
+        <td>CSS</td>
+        <td>Intermediate</td>
+      </tr>
+      <tr>
+        <td>Bootstrap</td>
+        <td>Beginner</td>
+      </tr>
+    </table>
+
+    <!-- Paragraph with Hover Effect -->
+    <p class="hover-me">Hover over me for some fun!</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <!-- Image with Text Overlay -->
+    <div class="overlay-container">
+      <img src="https://cdn.pixabay.com/photo/2022/10/14/07/12/muslim-7520627_1280.jpg" alt="Project Image">
+      <div class="overlay-text">My Latest Project</div>
+    </div>
+
+    <!-- Image Overlay Fade -->
+    <div class="fade-container">
+      <img src="https://cdn.pixabay.com/photo/2015/05/31/13/45/working-791849_1280.jpg" alt="Overlay Image">
+      <div class="fade-overlay">CSS Overlay Fade!</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Fadya Alkarkukli | Portfolio Project</p>
+  </footer>
+
+</body>
+</html>
